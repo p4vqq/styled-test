@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Test Web App</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Подключаем CSS -->
+</head>
+<body>
+    <div id="app-container">
+        <h1 id="welcome-message">Привет из Web App!</h1>
+        <div id="telegram-info" style="display: none;">
+            <p><strong>Ваш Telegram ID:</strong> <span id="user-id"></span></p>
+            <button onclick="closeWebApp()">Закрыть приложение</button>
+        </div>
+        <div id="error-message" style="display: none;">
+            <p>Произошла ошибка. Эта страница работает только внутри Telegram.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Подключаем JavaScript -->
+</body>
+</html>
