@@ -10,7 +10,7 @@ let clickPower = 3;
 async function loadUserData() {
     if (!userId) return alert("Сначала авторизуйтесь через Telegram.");
     try {
-        const response = await fetch(`https://sosal-game.p4vqq.repl.co/api/user/${userId}`);
+        const response = await fetch(`https://740d71e7-3e76-457d-87e3-b8e5d808b89a-00-3u8kaj6imes0c.kirk.replit.dev/api/user/${userId}`);
         if (!response.ok) return alert("Ошибка при загрузке данных пользователя.");
         const data = await response.json();
         balance = data.balance || 0;
@@ -26,7 +26,7 @@ async function loadUserData() {
     }
 }
 
-// Функция для сохранения данных пользователя
+// Сохранение данных пользователя
 async function saveUserData() {
     if (!userId) return alert("Сначала авторизуйтесь через Telegram.");
     try {
@@ -38,7 +38,7 @@ async function saveUserData() {
             clickUpgradeCost,
             clickPower,
         };
-        const response = await fetch(`https://sosal-game.p4vqq.repl.co/api/user/${userId}`, {
+        const response = await fetch(`https://740d71e7-3e76-457d-87e3-b8e5d808b89a-00-3u8kaj6imes0c.kirk.replit.dev/api/user/${userId}`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(userData),
